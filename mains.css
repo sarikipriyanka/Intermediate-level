@@ -1,0 +1,444 @@
+@import url("https://goggleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --sub-heading-top--: hsl(276, 100%, 81%);
+    --call-chat--: hsl(276, 55%, 52%);
+    --Response-chat--: hsl(271, 15%, 43%);
+    --chat-input--: hsl(206, 6%, 79%);
+    --main-heading--: hsl(271, 36%, 24%);
+    --paragraph--: hsl(270, 7%, 64%);
+    /* Gradients */
+    --bg--: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    --upper-left--: linear-gradient(to top, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    --call-price--: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    /* Secondary */
+    --White--: hsl(0, 0%, 100%);
+    --app-bg--: hsl(270, 20%, 96%);
+    --lower-right--: hsl(300, 7%, 94%);
+    --button-bg--: hsl(271, 36%, 24%);
+    --radio-button-outline--: hsl(287, 17%, 10%);
+    --Instagram-border--: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+
+html,
+body {
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--app-bg--);
+    overflow: hidden;
+}
+
+.main {
+    position: relative;
+    overflow: hidden;
+    opacity: 1;
+}
+
+.main::before,
+.main::after {
+    content: '';
+    width: 35%;
+    height: 85vh;
+    position: absolute;
+}
+
+.main::before {
+    background: var(--upper-left--);
+    border-radius: 0 0 50% 50%;
+    top: 0;
+    left: -10%;
+    z-index: 0;
+}
+
+.main::after {
+    background-color: var(--lower-right--);
+    border-radius: 50% 50% 0 0;
+    right: -10%;
+    bottom: 0;
+    z-index: 0;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 61%;
+    margin: 0 auto;
+    opacity: 1;
+}
+
+.mobile {
+    width: 230px;
+    max-width: 230px;
+    height: 430px;
+    border: 10px solid var(--White--);
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 20px var(--chat-input--);
+    background-color: var(--White--);
+    margin-left: 11px;
+}
+
+.header {
+    height: 15%;
+    background: var(--bg--);
+    border-radius: 15px 15px 5px 5px;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    left: 20%;
+    width: 60%;
+    height: 4%;
+    background-color: var(--White--);
+    border-radius: 0px 0px 16px 16px;
+}
+
+.profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 5px;
+}
+
+.return {
+    position: relative;
+    margin-top: 0px;
+    margin-right: 5%;
+    margin-left: 5px;
+    opacity: 0.8;
+}
+
+.return::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0px;
+    width: 3px;
+    height: 9px;
+    background-color: var(--White--);
+    transform: skew(-28deg, 0deg);
+}
+
+.return::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 0px;
+    width: 3px;
+    height: 9px;
+    background-color: var(--White--);
+    transform: skew(28deg, 0deg);
+}
+
+.profile img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 12px;
+    border: 2px solid var(--White--);
+}
+
+.dsc {
+    color: var(--White--);
+    margin-top: 8px;
+    font-weight: 500;
+    font-size: 0.5rem;
+}
+
+.dsc h3 {
+    font-size: 0.5rem;
+    margin-top: 5px;
+    margin-top: 5px;
+    opacity: 0.6;
+}
+
+.options {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    margin-left: 90%;
+    background-color: var(--White--);
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+.options::before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    top: -6px;
+    left: 0px;
+    background-color: var(--White--);
+    border-radius: 50%;
+}
+
+.options::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    top: 6px;
+    left: 0px;
+    background-color: var(--White--);
+    border-radius: 50%;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    font-size: 0.4rem;
+    border-radius: 5px 5px 15px 15px;
+    background-color: var(--app-bg--);
+    height: 100%;
+}
+
+.call {
+    border-radius: 7px 7px 7px 0;
+    color: var(--call-chat--);
+    background-color: var(--chat-input--);
+    max-width: 60%;
+    width: fit-content;
+    margin: 7px 2px 0px 2px;
+    padding: 5px;
+}
+
+.img {
+    display: flex;
+    justify-content: flex-start;
+    width: 60%;
+    margin-left: 35%;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.img img {
+    width: 35px;
+    height: 35px;
+    border-radius: 7px;
+    margin: 4px;
+    cursor: pointer;
+}
+
+.response {
+    border-radius: 7px 7px 0px 7px;
+    color: var(--Response-chat--);
+    background-color: var(--White--);
+    max-width: 60%;
+    width: fit-content;
+    margin: 7px 0px 0px 50%;
+    padding: 5px;
+    right: 0px;
+}
+
+.response1 {
+    border-radius: 10px 10px 0px 10px;
+    color: var(--Response-chat--);
+    background-color: var(--White--);
+    max-width: 60%;
+    width: fit-content;
+    margin: 7px 0px 0px 70%;
+    padding: 5px;
+    right: 0px;
+}
+
+.callprice {
+    display: inline-flex;
+    border-radius: 7px 7px 7px 0;
+    color: var(--White--);
+    background: var(--call-price--);
+    max-width: 70%;
+    width: fit-content;
+    margin: 7px 2px 0px 2px;
+    padding: 5px 10px 5px 5px;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.callprice div {
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--White--);
+    border-radius: 50%;
+    margin-right: 5px;
+    opacity: 0.5;
+}
+
+.callprice h3 {
+    margin: 0px 10px 0px 0px;
+    font-weight: 500;
+    opacity: 0.5;
+}
+
+.callprice span {
+    margin: 0px 0px 0px 15px;
+    font-size: 0.7rem;
+}
+
+form {
+    margin: 10px 5px 5px 5px;
+    border-radius: 15px;
+    display: inline-flex;
+    height: 35px;
+}
+
+input {
+    width: 100%;
+    padding: 5px 10px 5px;
+    border-radius: 30px;
+    border: 1px solid var(--app-bg--);
+    opacity: 0.8;
+}
+
+input:focus {
+    outline: none;
+}
+
+.arrow {
+    font-size: 30px;
+    color: var(--White--);
+    background-color: var(--button-bg--);
+    border-radius: 50%;
+    padding: 0px 10px;
+    height: 33px;
+    margin-left: -39px;
+    margin-top: 1px;
+}
+
+.text {
+    position: relative;
+    top: 3vh;
+    width: 58%;
+    height: 200px;
+    margin: 0px 0px 0px 13%;
+    z-index: 2;
+}
+
+.text h1 {
+    font-size: 2rem;
+}
+
+.text p {
+    font-size: 1rem;
+    margin-top: 15px;
+    line-height: 1.5rem;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: relative;
+    position: -10px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+/* mobile version */
+
+@media screen and (max-width: 880px) {
+    .main::before,
+    .main::after {
+        content: '';
+        width: 78%;
+        height: 60vh;
+    }
+    .main::before {
+        left: -30%;
+    }
+    .main::after {
+        border-radius: 50% 50% 0 0;
+        right: -30%;
+    }
+    .content {
+        flex-direction: column;
+        width: 90%;
+    }
+    .mobile {
+        margin-left: 0px;
+        margin-top: 10px;
+        z-index: 3;
+    }
+    .text {
+        position: relative;
+        text-align: center;
+        top: 30px;
+        width: 80%;
+        height: 200px;
+        margin: 0px;
+        z-index: 2;
+    }
+    .text h1 {
+        font-size: 2rem;
+    }
+    .text p {
+        font-size: 1rem;
+        margin-top: 10px;
+        line-height: 1.5rem;
+    }
+}
+
+@media screen and (max-height: 800px) {
+    .mobile {
+        width: 180px;
+        max-width: 180px;
+        height: 380px;
+    }
+    .profile {
+        padding: 5px 5px;
+    }
+    .profile img {
+        height: 25px;
+        width: 25px;
+    }
+    .dsc {
+        margin-top: 10px;
+        font-size: 0.4rem;
+    }
+    .dsc h3 {
+        font-size: 0.4rem;
+    }
+    .message {
+        padding: 3px;
+        font-size: 0.3rem;
+    }
+    .img {
+        margin-left: 27%;
+    }
+    .img img {
+        width: 30px;
+        height: 30px;
+        border-radius: 7px;
+    }
+    .response {
+        width: fit-content;
+        margin: 5px 0px 0px 50%;
+    }
+    .response1 {
+        margin: 5px 0px 0px 70%;
+    }
+    .arrow {
+        font-size: 30px;
+        height: 33px;
+        margin-left: -39px;
+        margin-top: 1px;
+    }
+    .text h1 {
+        font-size: 1.3rem;
+    }
+    .text p {
+        font-size: 0.7rem;
+        margin-top: 5px;
+        line-height: 1.2rem;
+    }
+}
